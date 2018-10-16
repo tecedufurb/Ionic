@@ -7,7 +7,30 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController) {}
+
+
+  abrirRealtimeDatabase(){
+
+    this.navCtrl.push('RealtimedatabasePage');
+
+  }
+
+  abrirFirebaseAuthentication(){
+
+    this.navCtrl.push('AuthenticationPage');
+
+  }
+  
+  abrirFirebaseStorage(){
+
+    this.navCtrl.push('StoragePage');
+
+  }
+
+  abrirIonicStorage(){
+
+    this.navCtrl.push('IonicstoragePage');
 
   }
 

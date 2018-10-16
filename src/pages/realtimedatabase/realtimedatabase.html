@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Realtime Database</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  
+  <ion-list>
+    <ion-item-sliding *ngFor="let contato of contatos | async">
+      <ion-item>
+        <h1>{{ contato.nome }}</h1>
+        <p>{{ contato.telefone }}</p>
+      </ion-item>
+      <ion-item-options side="left">
+        <button color="blue" ion-button expandable (click)="editarContato(contato)"><ion-icon name="create"></ion-icon>Editar</button>
+        <button color="danger" ion-button expandable (click)="excluirContato(contato.key)"><ion-icon name="trash"></ion-icon>Apagar</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  
+  <ion-fab bottom right>
+    
+    <button ion-fab color="blue" (click)="abrirPagina()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    
+  </ion-fab>
+
+</ion-content>
