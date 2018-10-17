@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Storage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <div class="fileUpload btn btn-primary" style="margin-left: 0px;margin-right: 0px;">
+          <span><b>CARREGAR ARQUIVO</b></span>
+          <input type="file" (change)="atualizaArquivo($event)" class="upload"/>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p>{{ status }}</p>
+
+</ion-content>

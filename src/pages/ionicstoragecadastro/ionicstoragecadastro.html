@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="form">
+  
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" formControlName="nome" [(ngModel)]="model.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input type="text" formControlName="telefone" [(ngModel)]="model.telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Contato habilitado</ion-label>
+      <ion-checkbox color="dark" checked="true" formControlName="habilitado" [(ngModel)]="model.habilitado"></ion-checkbox>
+    </ion-item>
+
+    <div padding>
+      <button ion-button block type="submit" (click)="saveStorage()">Salvar</button>
+    </div>
+  
+  </form>
+
+</ion-content>
