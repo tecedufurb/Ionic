@@ -37,8 +37,8 @@ export class RealtimedatabasecadastroPage {
 
     this.form = this.formBuilder.group({
       key: [this.contact.key],
-      name: [this.contact.name, Validators.required],
-      tel: [this.contact.tel, Validators.required],
+      name: [this.contact.nome, Validators.required],
+      tel: [this.contact.telefone, Validators.required],
       habilitado: [this.contact.habilitado],
     });
 
